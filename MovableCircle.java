@@ -1,5 +1,5 @@
 
-public class MovableCircle implements Movable { 
+public class MovableCircle implements Shape { 
   private MovablePoint center;
   private int radius;
   
@@ -10,24 +10,29 @@ public class MovableCircle implements Movable {
   }
   
   // TASK: Implement all abstract methods declared in the interface
-  @Override
   public void moveUp() {
 	 center.moveUp();// move the center up
   }
 
-    @Override
   public void moveDown() {
 	 center.moveDown();// move the center up
   }
 
-  	@Override
 	public void moveLeft() {
 		center.moveLeft();
 	}
 
-		@Override
+
 	public void moveRight() {
 		center.moveRight(); // moves y point up by increment ySpeed
+	}
+
+	public double area() {
+		 return Math.PI * (this.radius*this.radius);
+	}
+
+	public double perimeter() {
+		 return Math.PI * (this.radius*2);
 	}
 
   	public String toString() {
